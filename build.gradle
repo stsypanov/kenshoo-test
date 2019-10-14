@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'tsypanov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    implementation 'com.opencsv:opencsv:4.6'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
+}
+
+compileJava {
+    options.compilerArgs += "-Xlint:unchecked"
+}
